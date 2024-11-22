@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Setara</string>
+    <string name="hint_email">Type your Email</string>
+    <string name="hint_password">Type Your Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="not_registered">Not Registered Yet, Sign Up!</string>
+    <string name="welcome">Welcome Back!</string>
+    <string name="register">Sign Up</string>
+</resources>
