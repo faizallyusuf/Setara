@@ -10,7 +10,7 @@
     <string name="type_your_email">Type your Email</string>
     <string name="type_your_password">Type Your Password</string>
     <string name="retype_your_password">Retype Your Password</string>
-    <string name="already_registered_sign_in">Already Registered , Sign In !</string>
+    <string name="already_registered_sign_in">Already Registered, Sign In !</string>
     <string name="logout">Logout</string>
 
     <string name="home">Home</string>
