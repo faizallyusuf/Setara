@@ -31,16 +31,24 @@ class SignUpActivity : AppCompatActivity() {
             if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()) {
                 if (pass == confirmPass) {
 
-                    firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener {
-                        if (it.isSuccessful) {
-                            val intent = Intent(this, SignInActivity::class.java) // Arahkan ke SignInActivity (Login)
+                    firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            // Pendaftaran berhasil
+                            Toast.makeText(this, "Akun berhasil dibuat! Silakan login.", Toast.LENGTH_LONG).show()
+
+                            // Logout setelah registrasi berhasil
+                            firebaseAuth.signOut()
+
+                            // Arahkan ke SignInActivity (Login)
+                            val intent = Intent(this, SignInActivity::class.java)
                             startActivity(intent)
                             finish()
                         } else {
-                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
-
+                            // Pendaftaran gagal
+                            Toast.makeText(this, "Gagal membuat akun: ${task.exception?.message}", Toast.LENGTH_LONG).show()
                         }
                     }
+
                 } else {
                     Toast.makeText(this, "Password is not matching", Toast.LENGTH_SHORT).show()
                 }
