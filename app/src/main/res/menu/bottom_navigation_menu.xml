@@ -6,17 +6,17 @@
         android:icon="@drawable/home"
         android:title="@string/home"/>
     <item
-        android:id="@+id/upcoming"
+        android:id="@+id/recommendation"
         android:enabled="true"
         android:icon="@drawable/recommend"
         android:title="@string/recommendation"/>
     <item
-        android:id="@+id/finished"
+        android:id="@+id/assist"
         android:enabled="true"
         android:icon="@drawable/assist"
         android:title="@string/assist"/>
     <item
-        android:id="@+id/favorite"
+        android:id="@+id/settings"
         android:enabled="true"
         android:icon="@drawable/button_setting"
         android:title="@string/settings"/>

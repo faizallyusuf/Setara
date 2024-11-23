@@ -1,53 +1,60 @@
 package com.capstone.setara
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import com.capstone.setara.databinding.ActivityMainBinding
-import com.capstone.setara.view.SignInActivity
-import com.google.android.material.navigation.NavigationBarView
-import com.google.firebase.auth.FirebaseAuth
-
-lateinit var auth: FirebaseAuth
+import com.capstone.setara.fragments.AssistFragment
+import com.capstone.setara.fragments.HomeFragment
+import com.capstone.setara.fragments.RecommendationFragment
+import com.capstone.setara.fragments.SettingsFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var navigationBar: NavigationBarView
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
 
-        // Initialize FirebaseAuth
-        auth = FirebaseAuth.getInstance()
+        // Inflate layout using ViewBinding
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        // Set up Edge to Edge layout
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        // Set default fragment to HomeFragment
+        if (savedInstanceState == null) {
+            replaceFragment(HomeFragment())
         }
 
-        // Set up Logout Button
-        val logoutButton: Button = findViewById(R.id.logoutButton)
-        logoutButton.setOnClickListener {
-            logout()
+        // Set BottomNavigationView listener
+        setupBottomNavigation()
+    }
+
+    private fun setupBottomNavigation() {
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.home -> { // ID untuk Home
+                    replaceFragment(HomeFragment())
+                    true
+                }
+                R.id.recommendation -> { // ID untuk Recommendation
+                    replaceFragment(RecommendationFragment())
+                    true
+                }
+                R.id.assist -> { // ID untuk Assist
+                    replaceFragment(AssistFragment())
+                    true
+                }
+                R.id.settings -> { // ID untuk Settings
+                    replaceFragment(SettingsFragment())
+                    true
+                }
+                else -> false
+            }
         }
     }
 
-    // Logout function
-    private fun logout() {
-        auth.signOut() // Perform the logout from Firebase
-
-        // Redirect to SignInActivity after logout
-        val intent = Intent(this, SignInActivity::class.java)
-        startActivity(intent)
-        finish() // Close MainActivity so user cannot go back
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.frame_container, fragment)
+            .commit()
     }
 }
