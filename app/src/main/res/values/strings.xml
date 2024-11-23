@@ -7,4 +7,15 @@
     <string name="welcome">Welcome Back!</string>
     <string name="register">Sign Up</string>
     <string name="splash">Splash</string>
+    <string name="type_your_email">Type your Email</string>
+    <string name="type_your_password">Type Your Password</string>
+    <string name="retype_your_password">Retype Your Password</string>
+    <string name="already_registered_sign_in">Already Registered , Sign In !</string>
+    <string name="logout">Logout</string>
+
+    <string name="home">Home</string>
+    <string name="about">About</string>
+    <string name="recommendation">Recommend</string>
+    <string name="assist">Assist</string>
+    <string name="settings">Settings</string>
 </resources>
