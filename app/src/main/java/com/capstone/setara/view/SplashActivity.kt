@@ -1,5 +1,6 @@
 package com.capstone.setara.view
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.capstone.setara.MainActivity
 import com.capstone.setara.R
 
+@SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
 
     companion object {
