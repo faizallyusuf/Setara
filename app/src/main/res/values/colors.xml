@@ -19,4 +19,6 @@
     <color name="second">#F5F5F5</color>
     <color name="favorite">#3498DB</color>
 
+    <color name="grey">#DFDFDF</color>
+
 </resources>
