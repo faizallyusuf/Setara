@@ -4,10 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.capstone.setara.databinding.ActivityMainBinding
-import com.capstone.setara.fragments.AssistFragment
 import com.capstone.setara.fragments.HomeFragment
 import com.capstone.setara.fragments.RecommendationFragment
 import com.capstone.setara.fragments.SettingsFragment
+import com.capstone.setara.ui.fragment.AssistFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
