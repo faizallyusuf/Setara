@@ -24,5 +24,16 @@
     <string name="go_button">Go</string>
     <string name="title_assist">Title Assist</string>
     <string name="description_assist">Description Assist</string>
-    <string name="about_us">About Us</string>
+    <string name="gmail">Gmail</string>
+    <string name="about_us_title">Setara</string>
+    <string name="about_us">Tentang Kami</string>
+
+    <string name="about_us_description">
+    Aplikasi ini dibuat oleh Tim Setara.\n\n
+    Tujuan aplikasi ini adalah untuk membantu orang dengan disabilitas
+    menemukan pekerjaan dengan lebih mudah dan inklusif.
+</string>
+    <string name="about_us_image">Gambar About Us</string>
+
+
 </resources>

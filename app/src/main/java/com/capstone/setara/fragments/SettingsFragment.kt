@@ -12,6 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
@@ -22,8 +23,10 @@ import com.capstone.setara.MainActivity
 import com.capstone.setara.R
 import com.capstone.setara.view.AboutUsActivity
 import com.capstone.setara.view.SignInActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class SettingsFragment : Fragment() {
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,6 +34,17 @@ class SettingsFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
 
+        // Ambil informasi pengguna saat ini
+        val auth = FirebaseAuth.getInstance()
+        val currentUser = auth.currentUser
+        val accountInfo = view.findViewById<TextView>(R.id.accountInfo)
+
+        // Perbarui nama/email di TextView
+        if (currentUser != null) {
+            accountInfo.text = currentUser.email ?: "Pengguna tidak memiliki email"
+        } else {
+            accountInfo.text = "Pengguna tidak terdaftar"
+        }
         // Buat Notification Channel
         createNotificationChannel()
 
@@ -46,15 +60,19 @@ class SettingsFragment : Fragment() {
             val intent = Intent(requireContext(), AboutUsActivity::class.java)
             startActivity(intent)
         }
-
         // Fitur Logout
         val logoutLayout = view.findViewById<LinearLayout>(R.id.logoutLayout)
         logoutLayout.setOnClickListener {
+            val auth = FirebaseAuth.getInstance()
+            auth.signOut()
+
             val intent = Intent(requireContext(), SignInActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
+
             Toast.makeText(context, "Anda telah logout", Toast.LENGTH_SHORT).show()
         }
+
 
         return view
     }

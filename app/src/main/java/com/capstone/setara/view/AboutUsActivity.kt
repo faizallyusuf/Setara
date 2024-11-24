@@ -11,9 +11,12 @@ class AboutUsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about_us)
 
-        val textView = findViewById<TextView>(R.id.aboutUsText)
-        textView.text = "Ini adalah halaman About Us\n\n" +
-                "Aplikasi ini dibuat oleh Tim Setara.\n" +
-                "Tujuan aplikasi ini adalah untuk membantu orang dengan disabilitas menemukan pekerjaan."
+        // Cari ID dari layout XML
+        val aboutUsTitle = findViewById<TextView>(R.id.aboutUsTitle)
+        val aboutUsDescription = findViewById<TextView>(R.id.aboutUsDescription)
+
+        // Set konten judul dan deskripsi
+        aboutUsTitle.text = getString(R.string.about_us_title)
+        aboutUsDescription.text = getString(R.string.about_us_description)
     }
 }
