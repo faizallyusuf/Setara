@@ -14,7 +14,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="12dp"
-        android:contentDescription="@string/assist_icon"
+        android:contentDescription="@string/assist"
         android:src="@drawable/gpt"
         tools:ignore="ImageContrastCheck" />
 

@@ -46,8 +46,6 @@ class AssistFragment : Fragment(R.layout.fragment_assist) {
         )
 
 
-
-
         // Setup RecyclerView dengan Adapter
         val adapter = AssistAdapter(assistItems) { item ->
             // Menangani klik item, bisa membuka detail atau aksi lainnya

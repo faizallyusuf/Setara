@@ -13,22 +13,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Setara"
         tools:targetApi="31">
+
         <activity
-            android:name=".view.SignInActivity"
+            android:name=".view.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.SignInActivity"
+            android:exported="true">
         </activity>
         <activity
             android:name=".view.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:name=".view.AboutUsActivity"
+            android:exported="true" />
+
     </application>
 
 </manifest>
