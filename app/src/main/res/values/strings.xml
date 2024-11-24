@@ -18,9 +18,4 @@
     <string name="recommendation">Recommend</string>
     <string name="assist">Assist</string>
     <string name="settings">Settings</string>
-
-    <string name="assist_icon">Icon</string>
-    <string name="go_button">Go</string>
-    <string name="description_assist">Description</string>
-    <string name="title_assist">Title</string>
 </resources>
