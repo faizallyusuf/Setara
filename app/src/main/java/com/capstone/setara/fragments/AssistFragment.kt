@@ -27,11 +27,25 @@ class AssistFragment : Fragment(R.layout.fragment_assist) {
 
         // Data untuk RecyclerView
         val assistItems = listOf(
-            AssistItem(R.drawable.gpt, "Chat GPT", "Capable of generating human-like text on context and past conversations.", "https://chat.openai.com"),
-            AssistItem(R.drawable.sendsteps, "Sendsteps", "AI Presentation Maker: Create presentation 10x faster.", "https://www.sendsteps.ai"),
-            AssistItem(R.drawable.gencraft, "Gencraft", "The world's most powerful AI photo and video generation engine.", "https://www.gencraft.com"),
-            AssistItem(R.drawable.simplified, "Simplified", "Generate 50+ types of copy in seconds with AI Writer.", "https://www.simplified.com")
+            AssistItem(R.drawable.gpt, "Chat GPT",
+                "Chat GPT by OpenAI is an advanced AI model that can generate human-like text. It's widely used for content creation, conversation simulation, and answering questions, making it a versatile tool for a range of applications.",
+                "https://chat.openai.com"
+            ),
+            AssistItem(R.drawable.sendsteps, "Sendsteps",
+                "Sendsteps is an AI-powered presentation tool that helps users create professional presentations quickly. By automating slide creation, it enables users to design high-quality presentations in a fraction of the time.",
+                "https://www.sendsteps.ai"
+            ),
+            AssistItem(R.drawable.gencraft, "Gencraft",
+                "Gencraft is a cutting-edge platform that uses AI to generate images and videos from text descriptions. It's especially valuable for content creators, designers, and marketers who need high-quality visuals quickly.",
+                "https://www.gencraft.com"
+            ),
+            AssistItem(R.drawable.simplified, "Simplified",
+                "Simplified is an AI-driven tool that helps users create over 50 types of copy in seconds. From marketing content to social media posts, it simplifies the content creation process, making it faster and more efficient.",
+                "https://www.simplified.com"
+            )
         )
+
+
 
 
         // Setup RecyclerView dengan Adapter

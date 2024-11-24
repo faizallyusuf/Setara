@@ -1,8 +1,9 @@
 package com.capstone.setara
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 import com.capstone.setara.databinding.ActivityMainBinding
 import com.capstone.setara.fragments.HomeFragment
 import com.capstone.setara.fragments.RecommendationFragment
@@ -11,6 +12,8 @@ import com.capstone.setara.ui.fragment.AssistFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var recyclerView: RecyclerView
+    private var isScrollUp = false  // To track scroll direction
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +22,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Initialize RecyclerView
+        recyclerView = findViewById(R.id.recyclerView)
+
         // Set default fragment to HomeFragment
         if (savedInstanceState == null) {
             replaceFragment(HomeFragment())
@@ -26,6 +32,9 @@ class MainActivity : AppCompatActivity() {
 
         // Set BottomNavigationView listener
         setupBottomNavigation()
+
+        // Add scroll listener for hiding/showing BottomNavigationView
+        setupScrollListener()
     }
 
     private fun setupBottomNavigation() {
@@ -52,9 +61,26 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun replaceFragment(fragment: Fragment) {
+    private fun replaceFragment(fragment: androidx.fragment.app.Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.frame_container, fragment)
             .commit()
+    }
+
+    // Set up RecyclerView scroll listener to hide/show BottomNavigationView
+    private fun setupScrollListener() {
+        recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                if (dy > 0 && !isScrollUp) {
+                    // User scrolls down, hide BottomNavigationView
+                    binding.bottomNavigation.visibility = View.GONE
+                    isScrollUp = true
+                } else if (dy < 0 && isScrollUp) {
+                    // User scrolls up, show BottomNavigationView
+                    binding.bottomNavigation.visibility = View.VISIBLE
+                    isScrollUp = false
+                }
+            }
+        })
     }
 }
