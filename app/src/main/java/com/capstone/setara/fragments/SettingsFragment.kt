@@ -27,7 +27,6 @@ import com.google.firebase.auth.FirebaseAuth
 
 class SettingsFragment : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

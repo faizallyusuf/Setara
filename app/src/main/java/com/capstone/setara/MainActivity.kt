@@ -43,6 +43,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.home -> { // ID untuk Home
                     replaceFragment(HomeFragment())
                     true
+                }R.id.course -> { // ID untuk Course
+                    replaceFragment(HomeFragment())
+                    true
                 }
                 R.id.recommendation -> { // ID untuk Recommendation
                     replaceFragment(RecommendationFragment())

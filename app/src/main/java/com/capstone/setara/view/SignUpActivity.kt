@@ -75,6 +75,7 @@ class SignUpActivity : AppCompatActivity() {
                 emailAnim,
                 passwordAnim,
                 confirmPassAnim,
+
                 buttonAnim,
                 signInTextAnim
             )
