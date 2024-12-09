@@ -96,19 +96,19 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <RadioButton
-                android:id="@+id/age17to25RadioButton"
+                android:id="@+id/RadioButton1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_17_25"
+                android:text="@string/_17_24"
                 android:textColor="#2E3A59" />
             <RadioButton
-                android:id="@+id/age26to30RadioButton"
+                android:id="@+id/RadioButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_26_30"
+                android:text="@string/_25_30"
                 android:textColor="#2E3A59" />
             <RadioButton
-                android:id="@+id/age31to35RadioButton"
+                android:id="@+id/RadioButton3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_31_35"
@@ -164,10 +164,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <CheckBox
-                android:id="@+id/expLessThan3CheckBox"
+                android:id="@+id/exp0To2CheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_3"
+                android:text="@string/_0_2"
                 android:textColor="#2E3A59" />
             <CheckBox
                 android:id="@+id/exp3To5CheckBox"
@@ -176,12 +176,48 @@
                 android:text="@string/_3_5"
                 android:textColor="#2E3A59" />
             <CheckBox
-                android:id="@+id/expMoreThan5CheckBox"
+                android:id="@+id/expMoreThan6CheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_5"
+                android:text="@string/_6"
                 android:textColor="#2E3A59" />
+
         </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- City Label -->
+                <TextView
+                    android:id="@+id/cityLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/city"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="#2E3A59" />
+
+                <!-- City Spinner -->
+                <Spinner
+                    android:id="@+id/citySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_dropdown"
+                    android:entries="@array/city_array"
+                    android:minHeight="48dp"
+                    android:padding="12dp"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
 
         <!-- Submit Button -->
         <Button
@@ -193,5 +229,6 @@
             android:text="@string/submit"
             android:textColor="@android:color/white"
             android:padding="12dp" />
+
     </LinearLayout>
 </ScrollView>

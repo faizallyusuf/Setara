@@ -16,9 +16,10 @@ class RecommendationFragment : Fragment() {
     private lateinit var daksaCheckBox: CheckBox
     private lateinit var netraCheckBox: CheckBox
     private lateinit var runguCheckBox: CheckBox
-    private lateinit var expLessThan3CheckBox: CheckBox
+    private lateinit var exp0To2CheckBox: CheckBox
     private lateinit var exp3To5CheckBox: CheckBox
-    private lateinit var expMoreThan5CheckBox: CheckBox
+    private lateinit var expMoreThan6CheckBox: CheckBox
+    private lateinit var citySpinner: Spinner
     private lateinit var submitButton: Button
 
     override fun onCreateView(
@@ -39,10 +40,17 @@ class RecommendationFragment : Fragment() {
         daksaCheckBox = view.findViewById(R.id.daksaCheckBox)
         netraCheckBox = view.findViewById(R.id.netraCheckBox)
         runguCheckBox = view.findViewById(R.id.runguCheckBox)
-        expLessThan3CheckBox = view.findViewById(R.id.expLessThan3CheckBox)
+        exp0To2CheckBox = view.findViewById(R.id.exp0To2CheckBox)
         exp3To5CheckBox = view.findViewById(R.id.exp3To5CheckBox)
-        expMoreThan5CheckBox = view.findViewById(R.id.expMoreThan5CheckBox)
+        expMoreThan6CheckBox = view.findViewById(R.id.expMoreThan6CheckBox)
+        citySpinner = view.findViewById(R.id.citySpinner)
         submitButton = view.findViewById(R.id.submitButton)
+
+        val citySpinner: Spinner = view.findViewById(R.id.citySpinner)
+        val cities = resources.getStringArray(R.array.city_array)  // Mengambil string-array dari strings.xml
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, cities)
+        citySpinner.adapter = adapter
+
 
         // Set up click listener for the submit button
         submitButton.setOnClickListener {
@@ -74,6 +82,13 @@ class RecommendationFragment : Fragment() {
             "Not selected"
         }
 
+        // Get city
+        val city = citySpinner.selectedItem.toString()
+        if (city == "Pilih kota") {
+            Toast.makeText(requireContext(), "Silakan pilih kota", Toast.LENGTH_SHORT).show()
+            return
+        }
+
         // Get disabilities
         val disabilities = mutableListOf<String>()
         if (daksaCheckBox.isChecked) disabilities.add("Daksa")
@@ -82,15 +97,16 @@ class RecommendationFragment : Fragment() {
 
         // Get work experience
         val experiences = mutableListOf<String>()
-        if (expLessThan3CheckBox.isChecked) experiences.add("<3")
+        if (exp0To2CheckBox.isChecked) experiences.add("0-2")
         if (exp3To5CheckBox.isChecked) experiences.add("3-5")
-        if (expMoreThan5CheckBox.isChecked) experiences.add(">5")
+        if (expMoreThan6CheckBox.isChecked) experiences.add(">6")
 
         // Display data
         val result = """
            Name: $name
            Gender: $gender
            Age: $age
+           City: $city
            Disability: ${if (disabilities.isEmpty()) "None" else disabilities.joinToString(", ")}
            Experience: ${if (experiences.isEmpty()) "None" else experiences.joinToString(", ")}
        """.trimIndent()

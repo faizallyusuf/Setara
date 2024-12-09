@@ -47,17 +47,17 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="age">Age</string>
-    <string name="_17_25">17-25</string>
-    <string name="_26_30">26-30</string>
+    <string name="_17_24">17-24</string>
+    <string name="_25_30">26-30</string>
     <string name="_31_35">31-35</string>
     <string name="disability">Disability</string>
     <string name="daksa">Daksa</string>
     <string name="netra">Netra</string>
     <string name="rungu">Rungu</string>
     <string name="length_of_experience">Length of Experience</string>
-    <string name="_3"><![CDATA[<3]]></string>
+    <string name="_0_2">0-2</string>
     <string name="_3_5">3-5</string>
-    <string name="_5"><![CDATA[>5]]></string>
+    <string name="_6"><![CDATA[>6]]></string>
     <string name="submit">Submit</string>
     <string name="welcome_user">Welcome, %1$s 👋</string>
     <string name="welcome_guest">Welcome, Guest 👋</string>
@@ -69,6 +69,23 @@
     <string name="secondary_image">Secondary Image</string>
     <string name="welcome_message">Welcome to Setara, an application that provides\nequal opportunities for everyone. Here, we help you\nfind job opportunities that suit you.</string>
 
-
+    <string name="retry">Reload</string>
+    <string name="city">"City "</string>
+    <string-array name="city_array">
+        <item>Jakarta</item>
+        <item>Bandung</item>
+        <item>Bogor</item>
+        <item>Depok</item>
+        <item>Bekasi</item>
+        <item>Cimahi</item>
+        <item>Tangerang</item>
+        <item>Sukabumi</item>
+        <item>Tasikmalaya</item>
+        <item>Cirebon</item>
+        <item>Sumedang</item>
+        <item>Purwakarta</item>
+        <item>Garut</item>
+        <item>Ciamis</item>
+    </string-array>
 
 </resources>
