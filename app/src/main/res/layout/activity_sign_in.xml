@@ -7,11 +7,6 @@
 
     tools:context=".view.SignInActivity">
 
-
-    <!-- Asset 1 -->
-
-    <!-- Asset 2 -->
-
     <ImageView
         android:id="@+id/asset1"
         android:layout_width="wrap_content"
@@ -34,7 +29,6 @@
         app:layout_constraintTop_toBottomOf="@id/asset1"
         tools:ignore="ContentDescription" />
 
-    <!-- Welcome Text -->
     <TextView
         android:id="@+id/text_welcome"
         android:layout_width="wrap_content"
@@ -103,7 +97,7 @@
         android:layout_marginHorizontal="16dp"
         android:background="@drawable/button_shape"
         android:text="Sign In"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

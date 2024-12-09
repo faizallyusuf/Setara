@@ -16,7 +16,7 @@
     <string name="home">Home</string>
     <string name="course">Course</string>
     <string name="about">About</string>
-    <string name="recommendation">Recommend</string>
+    <string name="recommendation">Recommendation</string>
     <string name="assist">Assist</string>
     <string name="settings">Settings</string>
 
@@ -54,6 +54,11 @@
     <string name="_3_5">3-5</string>
     <string name="_5"><![CDATA[>5]]></string>
     <string name="submit">Submit</string>
+
+    <string name="app_logo">App Logo</string>
+    <string name="secondary_image">Secondary Image</string>
+    <string name="welcome_message">Welcome to Setara, an application that provides\nequal opportunities for everyone. Here, we help you\nfind job opportunities that suit you.</string>
+
 
 
 </resources>

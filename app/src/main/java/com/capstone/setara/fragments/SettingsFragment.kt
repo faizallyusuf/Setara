@@ -22,7 +22,7 @@ import androidx.fragment.app.Fragment
 import com.capstone.setara.MainActivity
 import com.capstone.setara.R
 import com.capstone.setara.view.AboutUsActivity
-import com.capstone.setara.view.SignInActivity
+import com.capstone.setara.view.SignUpInActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class SettingsFragment : Fragment() {
@@ -65,7 +65,7 @@ class SettingsFragment : Fragment() {
             val auth = FirebaseAuth.getInstance()
             auth.signOut()
 
-            val intent = Intent(requireContext(), SignInActivity::class.java)
+            val intent = Intent(requireContext(), SignUpInActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
 

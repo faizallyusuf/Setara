@@ -16,6 +16,7 @@
         android:theme="@style/Theme.Setara"
         tools:targetApi="31">
         <!-- SplashActivity sebagai entry point -->
+
         <activity
             android:name=".view.SplashActivity"
             android:exported="true">
@@ -26,6 +27,9 @@
         </activity>
 
         <!-- SignInActivity tanpa filter MAIN dan LAUNCHER -->
+        <activity
+            android:name=".view.SignUpInActivity"
+            android:exported="true" />
         <activity
             android:name=".view.SignInActivity"
             android:exported="true" />

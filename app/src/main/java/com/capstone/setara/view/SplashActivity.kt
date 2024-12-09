@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import com.capstone.setara.MainActivity
 import com.capstone.setara.R
 
 @SuppressLint("CustomSplashScreen")
@@ -22,9 +21,10 @@ class SplashActivity : AppCompatActivity() {
 
         // Use the constant variable for the delay
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            // Pindah ke SignUpInActivity
+            val intent = Intent(this, SignUpInActivity::class.java)
             startActivity(intent)
-            finish()
+            finish() // Mengakhiri SplashActivity agar tidak bisa kembali dengan tombol back
         }, SPLASH_SCREEN_DELAY_MILLIS)
     }
 }
