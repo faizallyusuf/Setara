@@ -32,8 +32,7 @@
     <string name="about_us_description">
     Aplikasi ini dibuat oleh Tim Setara.\n\n
     Tujuan aplikasi ini adalah untuk membantu orang dengan disabilitas
-    menemukan pekerjaan dengan lebih mudah dan inklusif.
-</string>
+    menemukan pekerjaan dengan lebih mudah dan inklusif.</string>
     <string name="about_us_image">Gambar About Us</string>
     <string name="input_job">Input Job Recommendation</string>
     <string name="name_input">Name</string>
@@ -54,6 +53,13 @@
     <string name="_3_5">3-5</string>
     <string name="_5"><![CDATA[>5]]></string>
     <string name="submit">Submit</string>
+    <string name="welcome_user">Welcome, %1$s 👋</string>
+    <string name="welcome_guest">Welcome, Guest 👋</string>
+
+
+
+
+    <string name="profile_image">Profile Image</string>
 
     <string name="app_logo">App Logo</string>
     <string name="secondary_image">Secondary Image</string>

@@ -1,18 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:background="@color/white"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_home"
-        android:layout_width="wrap_content"
+    <!-- Header -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to Home"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:padding="16dp" />
+        android:background="@color/orange"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Welcome, Lilis 👋"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingTop="32dp" />
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Save your time to speed up your work!"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Card View -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFeature"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/orange">
+
+            <ImageView
+                android:id="@+id/ivFeatureImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/profile"
+                android:contentDescription="@string/profile_image" />
+
+            <TextView
+                android:id="@+id/tvFeatureTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explore Our Best\nEssay Scoring Features"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_toEndOf="@id/ivFeatureImage"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/tvFeatureSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Let’s try it now"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_toEndOf="@id/ivFeatureImage"
+                android:layout_below="@id/tvFeatureTitle"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Linear Layout Baru -->
+    <LinearLayout
+        android:id="@+id/linearLayoutNewFeatures"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cardFeature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tvNewFeatures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discover New Features"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnExplore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explore Now"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
