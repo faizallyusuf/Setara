@@ -3,14 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:padding="16dp"
-    android:background="@android:color/white">
+    android:background="#F3F7FA">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/background_card"
+        android:padding="24dp"
+        android:elevation="8dp">
 
         <!-- Title -->
         <TextView
@@ -18,11 +20,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/input_job"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:layout_gravity="center"
             android:paddingBottom="16dp"
-            android:textColor="@android:color/black" />
+            android:textColor="#2E3A59" />
 
         <!-- Name -->
         <TextView
@@ -31,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="@string/name_input"
             android:paddingBottom="4dp"
-            android:textColor="@android:color/black" />
+            android:textColor="#2E3A59" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -41,12 +43,13 @@
                 android:id="@+id/nameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#80A3C1E2"
+                android:background="@null"
                 android:padding="12dp"
-                android:textColor="@android:color/black"
-                android:textColorHint="@android:color/darker_gray"
+                android:textColor="#2E3A59"
+                android:textColorHint="#B0BEC5"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
+
 
         <!-- Gender -->
         <TextView
@@ -56,7 +59,7 @@
             android:text="@string/gender"
             android:paddingTop="16dp"
             android:paddingBottom="4dp"
-            android:textColor="@android:color/black" />
+            android:textColor="#2E3A59" />
 
         <RadioGroup
             android:id="@+id/genderRadioGroup"
@@ -68,13 +71,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/male"
-                android:textColor="@android:color/black" />
+                android:textColor="#2E3A59" />
             <RadioButton
                 android:id="@+id/femaleRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/female"
-                android:textColor="@android:color/black" />
+                android:textColor="#2E3A59" />
         </RadioGroup>
 
         <!-- Age -->
@@ -85,7 +88,7 @@
             android:text="@string/age"
             android:paddingTop="16dp"
             android:paddingBottom="4dp"
-            android:textColor="@android:color/black" />
+            android:textColor="#2E3A59" />
 
         <RadioGroup
             android:id="@+id/ageRadioGroup"
@@ -97,19 +100,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_17_25"
-                android:textColor="@android:color/black" />
+                android:textColor="#2E3A59" />
             <RadioButton
                 android:id="@+id/age26to30RadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_26_30"
-                android:textColor="@android:color/black" />
+                android:textColor="#2E3A59" />
             <RadioButton
                 android:id="@+id/age31to35RadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_31_35"
-                android:textColor="@android:color/black" />
+                android:textColor="#2E3A59" />
         </RadioGroup>
 
         <!-- Disability -->
@@ -120,7 +123,7 @@
             android:text="@string/disability"
             android:paddingTop="16dp"
             android:paddingBottom="4dp"
-            android:textColor="@android:color/black" />
+            android:textColor="#2E3A59" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -131,19 +134,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/daksa"
-                android:textColor="@android:color/black" />
+                android:textColor="#2E3A59" />
             <CheckBox
                 android:id="@+id/netraCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/netra"
-                android:textColor="@android:color/black" />
+                android:textColor="#2E3A59" />
             <CheckBox
                 android:id="@+id/runguCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/rungu"
-                android:textColor="@android:color/black" />
+                android:textColor="#2E3A59" />
         </LinearLayout>
 
         <!-- Length of Experience -->
@@ -154,7 +157,7 @@
             android:text="@string/length_of_experience"
             android:paddingTop="16dp"
             android:paddingBottom="4dp"
-            android:textColor="@android:color/black" />
+            android:textColor="#2E3A59" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -165,19 +168,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_3"
-                android:textColor="@android:color/black" />
+                android:textColor="#2E3A59" />
             <CheckBox
                 android:id="@+id/exp3To5CheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_3_5"
-                android:textColor="@android:color/black" />
+                android:textColor="#2E3A59" />
             <CheckBox
                 android:id="@+id/expMoreThan5CheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_5"
-                android:textColor="@android:color/black" />
+                android:textColor="#2E3A59" />
         </LinearLayout>
 
         <!-- Submit Button -->
@@ -186,7 +189,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:background="@android:color/black"
+            android:backgroundTint="#4CAF50"
             android:text="@string/submit"
             android:textColor="@android:color/white"
             android:padding="12dp" />

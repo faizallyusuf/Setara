@@ -122,7 +122,7 @@ class SettingsFragment : Fragment() {
         val notificationBuilder = NotificationCompat.Builder(requireContext(), channelId)
             .setSmallIcon(R.drawable.notification)
             .setContentTitle("Notifikasi Baru")
-            .setContentText("Ini adalah contoh notifikasi.")
+            .setContentText("Pekerjaan Baru Tersedia")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true) // Hapus notifikasi setelah diklik

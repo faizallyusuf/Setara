@@ -30,9 +30,15 @@
     <string name="about_us">Tentang Kami</string>
 
     <string name="about_us_description">
-    Aplikasi ini dibuat oleh Tim Setara.\n\n
-    Tujuan aplikasi ini adalah untuk membantu orang dengan disabilitas
-    menemukan pekerjaan dengan lebih mudah dan inklusif.</string>
+    This app was created by the Setara Team.\n\n
+    The purpose of this app is to help people with disabilities
+    find easier and more inclusive jobs.\n\n
+    We hope this app can open more opportunities and
+    provide equal access for every individual, regardless of
+    limitations. With this app, we hope to reduce disparities and create fairer opportunities for everyone.
+</string>
+
+
     <string name="about_us_image">Gambar About Us</string>
     <string name="input_job">Input Job Recommendation</string>
     <string name="name_input">Name</string>
@@ -55,8 +61,6 @@
     <string name="submit">Submit</string>
     <string name="welcome_user">Welcome, %1$s 👋</string>
     <string name="welcome_guest">Welcome, Guest 👋</string>
-
-
 
 
     <string name="profile_image">Profile Image</string>
