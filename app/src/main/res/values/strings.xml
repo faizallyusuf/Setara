@@ -35,6 +35,25 @@
     menemukan pekerjaan dengan lebih mudah dan inklusif.
 </string>
     <string name="about_us_image">Gambar About Us</string>
+    <string name="input_job">Input Job Recommendation</string>
+    <string name="name_input">Name</string>
+    <string name="name">Name</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="age">Age</string>
+    <string name="_17_25">17-25</string>
+    <string name="_26_30">26-30</string>
+    <string name="_31_35">31-35</string>
+    <string name="disability">Disability</string>
+    <string name="daksa">Daksa</string>
+    <string name="netra">Netra</string>
+    <string name="rungu">Rungu</string>
+    <string name="length_of_experience">Length of Experience</string>
+    <string name="_3"><![CDATA[<3]]></string>
+    <string name="_3_5">3-5</string>
+    <string name="_5"><![CDATA[>5]]></string>
+    <string name="submit">Submit</string>
 
 
 </resources>

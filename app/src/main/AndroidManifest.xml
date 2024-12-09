@@ -35,8 +35,13 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
         <activity android:name=".view.AboutUsActivity" />
+
+
+
 
     </application>
 

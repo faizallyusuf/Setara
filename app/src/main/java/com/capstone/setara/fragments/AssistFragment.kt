@@ -22,10 +22,9 @@ class AssistFragment : Fragment(R.layout.fragment_assist) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inisialisasi view binding
+
         binding = FragmentAssistBinding.inflate(inflater, container, false)
 
-        // Data untuk RecyclerView
         val assistItems = listOf(
             AssistItem(R.drawable.gpt, "Chat GPT",
                 "Chat GPT by OpenAI is an advanced AI model that can generate human-like text. It's widely used for content creation, conversation simulation, and answering questions, making it a versatile tool for a range of applications.",
@@ -45,13 +44,10 @@ class AssistFragment : Fragment(R.layout.fragment_assist) {
             )
         )
 
-
-        // Setup RecyclerView dengan Adapter
         val adapter = AssistAdapter(assistItems) { item ->
-            // Menangani klik item, bisa membuka detail atau aksi lainnya
+
             Toast.makeText(context, "${item.title} clicked!", Toast.LENGTH_SHORT).show()
 
-            // Buka link di browser saat tombol diklik
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(item.url))
             startActivity(intent)
         }

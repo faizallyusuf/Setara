@@ -5,6 +5,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.capstone.setara.databinding.ActivityMainBinding
+import com.capstone.setara.fragments.CourseFragment
 import com.capstone.setara.fragments.HomeFragment
 import com.capstone.setara.fragments.RecommendationFragment
 import com.capstone.setara.fragments.SettingsFragment
@@ -44,7 +45,7 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(HomeFragment())
                     true
                 }R.id.course -> { // ID untuk Course
-                    replaceFragment(HomeFragment())
+                    replaceFragment(CourseFragment())
                     true
                 }
                 R.id.recommendation -> { // ID untuk Recommendation
