@@ -36,7 +36,7 @@
             android:id="@+id/tvSubTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Save your time to speed up your work!"
+            android:text="Discover your career potential!"
             android:textSize="14sp"
             android:textColor="@color/white"
             android:layout_marginStart="16dp"
@@ -77,7 +77,7 @@
                 android:id="@+id/tvFeatureTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Explore Our Best\nEssay Scoring Features"
+                android:text="Explore Our Best Features and Get Started Now"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
@@ -85,17 +85,6 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp" />
 
-            <TextView
-                android:id="@+id/tvFeatureSubtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Let’s try it now"
-                android:textSize="14sp"
-                android:textColor="@color/white"
-                android:layout_toEndOf="@id/ivFeatureImage"
-                android:layout_below="@id/tvFeatureTitle"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 

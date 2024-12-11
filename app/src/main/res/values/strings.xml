@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">Setara</string>
-    <string name="hint_email">Type your Email</string>
-    <string name="hint_password">Type Your Password</string>
+    <string name="hint_email">Type your email</string>
+    <string name="hint_password">Type your password</string>
     <string name="sign_in">Sign In</string>
-    <string name="not_registered">Not Registered Yet, Sign Up!</string>
+    <string name="not_registered">Not registered yet, sign up!</string>
     <string name="welcome">Welcome Back!</string>
     <string name="register">Sign Up</string>
     <string name="splash">Splash</string>
-    <string name="type_your_email">Type your Email</string>
-    <string name="type_your_password">Type Your Password</string>
-    <string name="retype_your_password">Retype Your Password</string>
-    <string name="already_registered_sign_in">Already Registered, Sign In !</string>
+    <string name="type_your_email">Type your email</string>
+    <string name="type_your_password">Type your password</string>
+    <string name="retype_your_password">Retype your password</string>
+    <string name="already_registered_sign_in">Already registered, sign in!</string>
     <string name="logout">Logout</string>
 
     <string name="home">Home</string>
