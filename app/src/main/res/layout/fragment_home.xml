@@ -22,7 +22,7 @@
             android:id="@+id/tvWelcome"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Welcome, Lilis 👋"
+            android:text="@string/welcome_setara"
             android:textSize="18sp"
             android:textColor="@color/white"
             android:layout_marginStart="16dp"
@@ -36,7 +36,7 @@
             android:id="@+id/tvSubTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Discover your career potential!"
+            android:text="@string/discover"
             android:textSize="14sp"
             android:textColor="@color/white"
             android:layout_marginStart="16dp"
@@ -77,13 +77,13 @@
                 android:id="@+id/tvFeatureTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Explore Our Best Features and Get Started Now"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="20dp"
                 android:layout_toEndOf="@id/ivFeatureImage"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp" />
+                android:text="@string/explore"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -104,17 +104,17 @@
             android:id="@+id/tvNewFeatures"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Discover New Features"
-            android:textSize="16sp"
-            android:textStyle="bold"
             android:layout_marginBottom="8dp"
-            android:textColor="@color/black" />
+            android:text="@string/discover_new"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnExplore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Explore Now"
+            android:text="@string/explore_now"
             android:backgroundTint="@color/orange"
             android:textColor="@color/white" />
     </LinearLayout>

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.capstone.setara.databinding.ActivityMainBinding
 import com.capstone.setara.fragments.HomeFragment
 import com.capstone.setara.fragments.RecommendationFragment
+
 import com.capstone.setara.fragments.SettingsFragment
 import com.capstone.setara.ui.fragment.AssistFragment
 
