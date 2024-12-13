@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.capstone.setara.databinding.ActivityMainBinding
 import com.capstone.setara.fragments.HomeFragment
 import com.capstone.setara.fragments.RecommendationFragment
-
 import com.capstone.setara.fragments.SettingsFragment
 import com.capstone.setara.ui.fragment.AssistFragment
 
@@ -38,6 +37,13 @@ class MainActivity : AppCompatActivity() {
         setupScrollListener()
     }
 
+    // Ubah visibilitas menjadi public
+    fun replaceFragment(fragment: androidx.fragment.app.Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.frame_container, fragment)
+            .commit()
+    }
+
     private fun setupBottomNavigation() {
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
@@ -60,12 +66,6 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
-    }
-
-    private fun replaceFragment(fragment: androidx.fragment.app.Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.frame_container, fragment)
-            .commit()
     }
 
     // Set up RecyclerView scroll listener to hide/show BottomNavigationView
