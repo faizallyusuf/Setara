@@ -11,7 +11,6 @@ import androidx.lifecycle.lifecycleScope
 import com.capstone.setara.R
 import com.capstone.setara.remote.ApiConfig
 import com.capstone.setara.remote.JobRecommendationRequest
-import com.capstone.setara.remote.JobRecommendationResponse
 import kotlinx.coroutines.launch
 
 class RecommendationFragment : Fragment() {
@@ -50,7 +49,7 @@ class RecommendationFragment : Fragment() {
         val selectedDisability = when (disabilityRadioGroup.checkedRadioButtonId) {
             R.id.daksaRadioButton -> "Daksa"
             R.id.netraRadioButton -> "Netra"
-            R.id.runguRadioButton -> "R ungu"
+            R.id.runguRadioButton -> "Rungu"
             else -> ""
         }
 
@@ -77,7 +76,7 @@ class RecommendationFragment : Fragment() {
         }
 
         // Tampilkan loading
-        jobResultsTextView.text = "Mengirim data ke server..."
+        jobResultsTextView.text = "Loading..."
 
         // Gunakan Coroutine untuk mengirim data
         lifecycleScope.launch {
@@ -94,9 +93,9 @@ class RecommendationFragment : Fragment() {
                 val response = apiService.sendJobRecommendation(request)
 
                 // Tampilkan hasil respons
-                jobResultsTextView.text = "Pesan: ${response.message}"
+                jobResultsTextView.text = "Job : ${response.message}"
             } catch (e: Exception) {
-                jobResultsTextView.text = "Terjadi kesalahan: ${e.message}"
+                jobResultsTextView.text = "Error occurred : ${e.message}"
                 Log.e("RecommendationFragment", "Error: ${e.message}", e)
             }
         }
